@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Health Game</title>
+  <meta name="description" content="A very simple game with the theme of health.">
+  <meta name="author" content="Speedstor">
+
+  <meta property="og:title" content="Health Game">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="A very simple game with the theme of health.">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <link rel="stylesheet" href="css/index.css?v=1.0">
+</head>
+
+<body style="margin: 0px;">
+  <!-- your content here... -->
+  <script src="js/index.js"></script>
+  <div class="header">
+    <div class="" style="opacity: 0;">
+      <h4 class="header-link" style="display: inline-block;">Home</h4>
+      <h4 class="header-link" style="display: inline-block;">About</h4>
+    </div>
+    <div class="" style="flex-grow: 2">
+      <h2 style="text-align: center; margin: 0px;">Grocery Shopping Simulator</h2>
+    </div>
+    <div class="" style="padding-right: 20px; display: flex; flex-direction: row; justify-content: flex-end;">
+      <a class="header-link" href="./index.html">Home</a>
+      <a class="header-link" href="./help.html">Help</a>
+    </div>
+  </div>
+
+  <!-- content -->
+  <div class="main-wrapper">
+    <div class="main-content">
+      <div id="fatherCard" class="card">
+        <div class="card-body">
+          <h1 style="text-align: center;">Happy Father's Day!!!</h1>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-body">
+          <div class="card-container">
+            <div class="card-square">
+              <div id="home-page" class="game-page" style="display: none;">
+                <div style="padding-top: 40%; padding-bottom: 40%; display: flex; flex-direction: row; justify-content: center; align-items: center;">
+                  <button class="mainPage-button">Shopping<br/>game</button>
+                  <button class="mainPage-button">Lifting<br/>game</button>
+                </div>
+              </div>
+
+              <div id="shopping-game" class="game-page" style="display: block; position: relative;">
+                <div id="post-game" style="flex-direction: column; background-color: rgba(255, 255, 255, 0.642); width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 2; display: none; justify-content: center; align-items: center;">
+                  <h1 style="font-size: 3rem; text-align: center;">Game Summary</h1>
+                  <p id="stats" style="text-align: center; font-size: 1.5rem; background-color: aliceblue; padding: 20px;">
+                  </p>
+                  <button class="mainPage-button" onclick="okay()">Continue</button>
+                </div>
+                <div id="pre-game" style="flex-direction: column; background-color: rgba(255, 255, 255, 0.642); width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 2; display: flex; justify-content: center; align-items: center;">
+                  <h1 style="font-size: 3rem; text-align: center;">How to play</h1>
+                  <p id="stats" style="text-align: center; font-size: 1.5rem; background-color: aliceblue; padding: 20px; width: 40%;">
+                    This is a grocery shopping simulator. Click on the items to buy it. Try to only buy healthy food, and avoid unhealthy food. That's it :)
+                  </p>
+                  <button class="mainPage-button" onclick="start()">Press to start</button>
+                </div>
+
+                <div class="shelf-outer">
+                  <div class="shelf-score">
+                    <h2 id="timer" style="text-align: center; display: inline-block; flex-grow: 2;">10s</h2>
+                    <div style="">
+                      <h3 style="padding-right: 10px; border-right: black 1px solid; display: inline-block;">Used: $<span id="moneyUsed">0.00</span></h3>
+                      <h3 style="padding-right: 10px; display: inline-block; padding-left: 5px; "># of Items: <span id="itemsBought">2</span></h3>
+                    </div>
+                  </div>
+                  
+                  <div class="shelf-row">
+                    <div class="item-container">
+                      <img id="item0-img" onclick="clickedItem(0);" src="./src/eggs.png"/>
+                    </div>
+                    <div class="item-container">
+                      <img id="item1-img" onclick="clickedItem(1);" src="./src/eggs.png"/>
+                    </div>
+                    <div class="item-container">
+                      <img id="item2-img" onclick="clickedItem(2);" src="./src/eggs.png"/>
+                    </div>
+                  </div>
+                  <div class="shelf-board">.</div>
+                  <div class="shelf-priceTag">
+                    <div class="priceTag-container">
+                      <div id="item0-price" class="priceTag">
+                        $32.50
+                      </div>
+                    </div>
+                    <div class="priceTag-container">
+                      <div id="item1-price" class="priceTag">
+                        $32.50
+                      </div>
+                    </div>
+                    <div class="priceTag-container">
+                      <div id="item2-price" class="priceTag">
+                        $32.50
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="shelf-spacer">.</div>
+                  <div class="shelf-row">
+                    <div class="item-container">
+                      <img id="item3-img" onclick="clickedItem(3);" src="./src/eggs.png"/>
+                    </div>
+                    <div class="item-container">
+                      <img id="item4-img" onclick="clickedItem(4);" src="./src/eggs.png"/>
+                    </div>
+                    <div class="item-container">
+                      <img id="item5-img" onclick="clickedItem(5);" src="./src/eggs.png"/>
+                    </div>
+                  </div>
+                  <div class="shelf-board">.</div>
+                  <div class="shelf-priceTag">
+                    <div class="priceTag-container">
+                      <div id="item3-price" class="priceTag">
+                        $32.50
+                      </div>
+                    </div>
+                    <div class="priceTag-container">
+                      <div id="item4-price" class="priceTag">
+                        $32.50
+                      </div>
+                    </div>
+                    <div class="priceTag-container">
+                      <div id="item5-price" class="priceTag">
+                        $32.50
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                  <div class="shelf-spacer">.</div>
+                </div>
+
+                
+              </div>
+
+              <div id="lifting-game" class="game-page" style="display: none;">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+</body>
+</html>

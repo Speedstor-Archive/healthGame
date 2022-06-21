@@ -1,0 +1,152 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    width: 100%;
+    background-color: rgb(185, 185, 185);
+    vertical-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.header-link {
+    padding: 8px;
+}
+
+.card {
+    background-color: antiquewhite;
+    margin-bottom: 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.card-container {
+    position: relative;
+    width: 100%;
+    background: url(../src/grassBackground.jpg); width: 100%; height: 100%; background-size: cover;
+}
+
+.game-page{
+}
+
+.card-square{
+    width: 100%;
+    height: 100%;
+}
+
+
+.card-body {
+    padding: 23px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.main-content{
+    display: flex;
+    flex-direction: column;
+    max-width: 1100px;
+    width: 85%; 
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 15px;
+}
+
+.main-wrapper {
+}
+
+.item-container, .priceTag-container {
+    width: 25%;
+    box-sizing: border-box;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.item-container img{
+    width: 100%;
+    height: 100%;
+}
+
+.priceTag-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.priceTag {
+    height: 20px;
+    font-size: 20px;
+    background: white;
+    border: black 1px solid;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.mainPage-button {
+    padding: 10px;
+    font-size: 40px;
+    margin: 10px;
+    width: 300px;
+}
+
+.shelf-outer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    top: 0;
+    bottom: 0;
+
+    background-color: #d1ba9e;
+}
+
+.shelf-spacer {
+    width: 100%;
+    height: 40px;
+}
+
+.shelf-score {
+    height: 9vw;
+    max-height: 110px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.shelf-row {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    max-height: 220px;
+    height: 20vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.shelf-board {
+    width: 100%;
+    height: 20px;
+    background-color: #c59353;
+}
+
+.shelf-wrap {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.shelf-priceTag {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    max-height: 60px;
+    height: 7vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-sizing: border-box;
+}
